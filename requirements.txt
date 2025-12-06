@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+Pillow
+numpy
+torch
+torchvision
+selectivesearch
+opencv-contrib-python
+python-multipart
+aiofiles

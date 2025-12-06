@@ -1,0 +1,21 @@
+rcnn-web/
+├─ data/
+│  ├─ sample.jpg                   # put test image(s) here
+│  └─ annotations/                 # optional: VOC/COCO for training
+├─ src/
+│  ├─ proposals.py                 # selective search + proposal filtering
+│  ├─ warp_and_crop.py             # crop & resize patches, map indices->boxes
+│  ├─ model.py                     # ResNet18 backbone + classifier head, load/save
+│  ├─ infer.py                     # end-to-end inference logic (used by web/app)
+│  ├─ train.py                     # optional: prepares training set + trains head
+│  └─ utils.py                     # nms, box utils, draw_boxes, label map
+├─ web/
+│  ├─ app.py                       # FastAPI server -> /predict
+│  └─ static/
+│     ├─ index.html                # upload UI
+│     └─ main.js                   # sends image to backend, renders results
+├─ notebooks/                       # optional: experiments Jupyter
+├─ requirements.txt
+├─ Dockerfile
+├─ README.md
+└─ run_demo.sh                      # helper: start server, open port instructions
